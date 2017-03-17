@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="build/css/vendor.css" rel="stylesheet" type="text/css">
         <script src="build/js/vendor.min.js"></script>
         <script src="build/js/app.js"></script>
@@ -10,10 +11,33 @@
     <body>
         <div class="container">
             <form id="issue">
-                <label for="symptom">Find a Doctor</label>
-                <input type="text" name="symptom" id="symptom">
-                <button type="submit" name="button" class="btn">Submit</button>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <label for="symptom">What is your problem?</label>
+                        <input type="text" name="symptom" id="symptom">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <label for="radius">Radius (Miles)</label>
+                        <input type="text" name="radius" id="radius">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <select id="gender" class="browser-default">
+                            <option value="" disabled selected>Choose Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" name="button" class="btn">Find a Doctor</button>
             </form>
+
+            <div id="results">
+
+            </div>
         </div>
     </body>
 </html>
