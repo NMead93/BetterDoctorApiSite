@@ -7,9 +7,8 @@ $(document).ready(function() {
         var symptom = $("#symptom").val();
         var radius = $("#radius").val();
         var gender = $("#gender").val();
-        var newSearch = new Search($("#symptom").val().toString(), $("#radius").val().toString(), $("#gender").val().toString());
-        console.log(newSearch.issue, newSearch.radius, newSearch.gender);
-        newSearch.getLocation()
+        var newSearch = new Search();
+        newSearch.getLocation(symptom, radius, gender)
             .then(newSearch.getDoctors);
     })
 })
