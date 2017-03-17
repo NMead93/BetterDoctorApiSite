@@ -34,7 +34,7 @@ DoctorSearch.prototype.getDoctors = function(coords) {
     $.get(requestUrl)
         .then(function(result) {
             for (i = 0; i < result.data.length; i++) {
-                $("#results").append("<div class='card blue-grey'><div class='card-image'><img src=" + result.data[i].profile.image_url + "></div><div class='card-content white-text'><span class='card-title'>" + result.data[i].profile.first_name + result.data[i].profile.last_name + result.data[i].profile.title + "</span><p>test</p></div></div>")
+                $("#results").append("<div class='card blue-grey'><div class='card-image'><img src=" + result.data[i].profile.image_url + "></div><div class='card-content white-text'><span class='card-title'>" + result.data[i].profile.first_name + " " + result.data[i].profile.last_name + " " + result.data[i].profile.title + "</span><p>" + result.data[i].profile.bio + "</p></div><div class='card-action'><a href=" + result.data[i].practices[0].website + ">Website</a></div></div>")
             }
         })
         .fail(function(error) {
